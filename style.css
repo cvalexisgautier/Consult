@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #1a1a2e; /* Fond bleu nuit */
+    --primary-color: #16213e; /* Panneau gauche */
+    --secondary-color: #0f3460; /* Panneau droit */
+    --accent-color: #e94560; /* Couleur d'accentuation (rose/rouge) */
+    --text-color: #e0e0e0; /* Texte principal */
+    --title-color: #ffffff; /* Titres */
+    --glass-bg: rgba(22, 33, 62, 0.6); /* Fond pour l'effet verre */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2em;
+}
+
+.cv-container {
+    display: flex;
+    width: 1100px;
+    max-width: 95%;
+    min-height: 90vh;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    overflow: hidden;
+}
+
+/* --- Panneau de Gauche --- */
+.left-panel {
+    background: var(--primary-color);
+    width: 35%;
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.initials {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    color: var(--title-color);
+    font-size: 4em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+
+.name {
+    font-size: 2.2em;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.title {
+    font-size: 1.2em;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-bottom: 2em;
+}
+
+.left-panel h3 {
+    color: var(--accent-color);
+    font-size: 1em;
+    letter-spacing: 2px;
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 0.5em;
+}
+
+.contact-info p, .hobbies p {
+    margin: 0.5em 0;
+    word-break: break-word; /* Pour les longues adresses email/URL */
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+.skills h4 {
+    color: var(--title-color);
+    margin-top: 1em;
+}
+.skills li {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.4em 0.8em;
+    border-radius: 5px;
+    margin: 0.4em 0;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+
+/* --- Panneau de Droite --- */
+.right-panel {
+    width: 65%;
+    padding: 3em;
+    overflow-y: auto; /* Permet le scroll si le contenu est trop long */
+}
+
+.right-panel h3 {
+    color: var(--accent-color);
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.section-block {
+    margin-bottom: 2.5em;
+}
+
+.job, .education {
+    margin-bottom: 1.5em;
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1.5em;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2em;
+}
+.job-header h4 {
+    font-size: 1.2em;
+    color: var(--title-color);
+    font-weight: 600;
+}
+.job-header span {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.company {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 0.8em;
+}
+
+.job ul, .education ul {
+    list-style-position: outside;
+    padding-left: 1.2em;
+}
+.job li, .education li {
+    margin-bottom: 0.5em;
+}
+
+/* --- Scrollbar customisée pour un look plus pro --- */
+.right-panel::-webkit-scrollbar {
+    width: 8px;
+}
+.right-panel::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+.right-panel::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
